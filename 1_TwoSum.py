@@ -13,3 +13,4 @@ class Solution:
                 return [dic[difference],index]
             else:
                 dic[value] = index
+
