@@ -1,5 +1,3 @@
-str = abcabcbb
-
 class Solution:
     def lengthOfLongestSubstring(self, s):
         """
@@ -17,3 +15,4 @@ class Solution:
             ans = max(ans, i - start + 1)
 
         return ans
+    
