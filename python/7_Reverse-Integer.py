@@ -5,4 +5,4 @@ class Solution:
         :rtype: int
         """
         x = int(str(x)[::-1]) if x >= 0 else int("-"+str(-x)[::-1])
-        return -2 **31 <= x <= 2 **31 - 1 and x or 0
+        return -2 ** 31 <= x <= 2 ** 31 - 1 and x or 0

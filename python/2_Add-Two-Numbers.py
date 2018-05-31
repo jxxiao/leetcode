@@ -7,4 +7,4 @@ class Solution:
         """
         for num in nums:
             if target-num in nums:
-                return [nums.index(num),nums.index(target-num)]
+                return [nums.index(num), nums.index(target-num)]
