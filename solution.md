@@ -1,4 +1,4 @@
-# 目录
+#
 
 * [1.Two Sum](#1.Two-Sum)  
 * [9.Palindrome Number](#9.Palindrome-Number)  
