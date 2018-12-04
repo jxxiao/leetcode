@@ -29,7 +29,7 @@ for index, value in enumerate(nums):
 
 # 9. Palindrome Number
 
-一行代码就OK了，str(x)把x转字符串倒序后和str(x)比一下就OK。
+一行代码就OK了，str(x)把x转字符串倒序后和str(x)比一下就OK。
 
 ```python
 return str(x)[::-1] == str(x)
@@ -88,13 +88,13 @@ for j in out:
 
 # 24.Swap Nodes in Pairs
 
-使用递归解决这题。
+使用递归解决这题。
 递归的主体就是我递归1、3、5...这些节点。
 然后:
 
 ```python
 1.next = recursion(3)
-# 1节点的下一个是递归返回的list
+# 1节点的下一个是递归返回的list
 2.next = 1
 # 完成交换1 2的交换
 
@@ -133,9 +133,9 @@ OrderedDict.fromkeys(nums)使用nums中的值作为key。
 
 两种方法
 第一种：
-最传统的，倒序遍历nums，
+最传统的，倒序遍历nums，
 如果nums[i] 小于9，直接nums[i] + 1 再return就OK，
-等于9时，nums[i] = 0,再看nums[i-1]是否小于9，逻辑同上。
+等于9时，nums[i] = 0,再看nums[i-1]是否小于9，逻辑同上。
 如果遍历完数组后，还没有return，说明这个数组里面全是9，直接return [1]+[0]*len(nums)
 
 ```python
