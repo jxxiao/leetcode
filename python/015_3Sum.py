@@ -1,6 +1,3 @@
-nums = [-1, 0, 1, 2, -1, -4]
-
-
 class Solution:
     def threeSum(self, nums):
         """
@@ -30,7 +27,5 @@ class Solution:
             arry.append(g)
 
 
-sol = Solution()
-
-for x in sol.threeSum(nums):
-    print(x)
+nums = [-1, 0, 1, 2, -1, -4]
+Solution().threeSum(nums)

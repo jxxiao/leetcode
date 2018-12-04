@@ -27,3 +27,9 @@ class Solution:
     def compostion(self, digit, out):
         k = [j+i for i in self.num_value[digit] for j in out]
         return k
+
+
+input_nums = "23"
+
+output = Solution().letterCombinations(input_nums)
+print(output)
