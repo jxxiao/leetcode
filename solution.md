@@ -1,7 +1,5 @@
 [TOC]
 
-
-
 # 1.Two Sum
 
 注意返回的是位置：
@@ -28,8 +26,6 @@ for index, value in enumerate(nums):
         # 将上面不在dict中的数存进去，注意这里的key是数组中数字的值，value数字位置
         dic[value] = index
 ```
-
-
 
 # 15. 3Sum
 
@@ -81,3 +77,36 @@ for j in out:
     for i in self.num_value[digit]:
         k.append(j+i)
 ```
+
+# 24.Swap Nodes in Pairs
+
+使用递归解决这题。
+递归的主体就是我递归1、3、5...这些节点。
+然后:
+
+```python
+1.next = recursion(3)
+# 1节点的下一个是递归返回的list
+2.next = 1
+# 完成交换1 2的交换
+
+temp = head.next
+head.next, temp.next = self.swapPairs(temp.next), head
+return temp
+
+```
+
+递归的出口就是1 2 为空，
+
+```python
+if head and head.next:
+    recursion
+```
+
+当head和head.next为空时：
+
+```python
+    return head
+```
+
+其实就是返回空
