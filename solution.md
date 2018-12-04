@@ -148,4 +148,13 @@ return [1] + [0] * len(digits)
 ```
 
 ~i 是按位取反操作，通过取反我们就能得到倒数第i+1个数。
-例如i = 0时，\~i是-1 所以使用\~i就可以实现倒序查看nums了。
+例如i = 0时，\~i是-1 所以使用\~i就可以实现倒序查看nums了。  
+
+第二种：  
+把list转换成str，再变成int，+1之后，再转成str，然后一个转int存入到list中。  
+
+```python
+result = []
+for i in str(int(''.join(str(i) for i in digits)) + 1):
+    result.append(int(i))
+```
