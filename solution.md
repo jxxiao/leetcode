@@ -131,9 +131,9 @@ OrderedDict.fromkeys(nums)使用nums中的值作为key。
 
 # 66. Plus One
 
-两种方法
-第一种：
-最传统的，倒序遍历nums，
+两种方法  
+第一种:  
+最传统的，倒序遍历nums，  
 如果nums[i] 小于9，直接nums[i] + 1 再return就OK，
 等于9时，nums[i] = 0,再看nums[i-1]是否小于9，逻辑同上。
 如果遍历完数组后，还没有return，说明这个数组里面全是9，直接return [1]+[0]*len(nums)
