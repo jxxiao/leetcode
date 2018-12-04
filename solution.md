@@ -27,6 +27,14 @@ for index, value in enumerate(nums):
         dic[value] = index
 ```
 
+# 9. Palindrome Number
+
+一行代码就OK了，str(x)把x转字符串倒序后和str(x)比一下就OK。
+
+```python
+return str(x)[::-1] == str(x)
+```
+
 # 15. 3Sum
 
 >
@@ -110,3 +118,34 @@ if head and head.next:
 ```
 
 其实就是返回空
+
+# 26. Remove Duplicates from Sorted Array
+
+```python
+from collections import OrderedDict
+# 导入OrderedDict
+return len(OrderedDict.fromkeys(nums))
+```
+
+OrderedDict.fromkeys(nums)使用nums中的值作为key。
+
+# 66. Plus One
+
+两种方法
+第一种：
+最传统的，倒序遍历nums，
+如果nums[i] 小于9，直接nums[i] + 1 再return就OK，
+等于9时，nums[i] = 0,再看nums[i-1]是否小于9，逻辑同上。
+如果遍历完数组后，还没有return，说明这个数组里面全是9，直接return [1]+[0]*len(nums)
+
+```python
+for i in range(len(digits)):
+    if digits[~i] < 9:
+        digits[~i] += 1
+        return digits
+    digits[~i] = 0
+return [1] + [0] * len(digits)
+```
+
+~i 是按位取反操作，通过取反我们就能得到倒数第i+1个数。
+例如i = 0时，~i = -1所以使用~i就可以实现倒序查看nums了。
