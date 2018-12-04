@@ -1,4 +1,5 @@
-[TOC]
+* [1.Two Sum](# 1.Two Sum)  
+* [9.Palindrome Number](#9. Palindrome Number)
 
 # 1.Two Sum
 
@@ -16,10 +17,12 @@ for index, value in enumerate(nums):
     difference = target - value
     # 判断差是否在dict里面，dict是使用key判断的。
     if difference in dic:
-        ''' 
-       	如果difference在里面，difference就是之前遍历过的，
-       	被存储到dict中,dic[difference]就是difference在数组中的位置，
-       	index就是此时被剪去的value的位置。
+        '''
+        如果difference在里面
+        difference就是之前遍历过的，
+        被存储到dict中,dic[difference]
+        就是difference在数组中的位置，
+        index就是此时被剪去的value的位置。
         '''
         return [dic[difference], index]
     else:
@@ -85,6 +88,10 @@ for j in out:
     for i in self.num_value[digit]:
         k.append(j+i)
 ```
+
+# 23. Merge k Sorted Lists
+
+用一个最笨的方法就可以了，把所有元素添加到一个list中，list排序后，再用这个list生成一个链表。  
 
 # 24.Swap Nodes in Pairs
 
