@@ -1,4 +1,8 @@
-# 目录
+# leetcode习题解答  
+
+这里会有我刷leetcode的习题解答，很多都是看讨论区学到的，然后自己重写了一遍。  
+
+## 目录
 
 * [1.Two Sum](#1.Two-Sum)  
 * [9.Palindrome Number](#9.Palindrome-Number)  
@@ -13,7 +17,7 @@
 
 注意返回的是位置：
 
-python的小Trick，**enumerate()**，把数组变成字典。
+python的小trick，**enumerate()**，把数组变成字典。
 
 首先，如果有一个字典dict{}，其key为nums[i]，value为i。我们只需要便利nums，求difference = target - nums[i]。判断dict[difference]是否在dict{nums[i]}和difference[difference]中即可。
 
