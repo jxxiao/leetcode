@@ -4,17 +4,17 @@
 
 ## 目录
 
-* [1. Two Sum](#1.Two-Sum)  
-* [9. Palindrome Number](#9.Palindrome-Number)  
-* [15. 3Sum](#15.3Sum)  
-* [17. Letter Combinations of a Phone Number](#17.Letter-Combinations-of-a-Phone-Number)
-* [23. Merge k Sorted Lists](#23.Merge-k-Sorted-Lists)  
-* [24. Swap Nodes in Pairs](#24.Swap-Nodes-in-Pairs)  
-* [26. Remove Duplicates from Sorted Array](#26.Remove-Duplicates-from-Sorted-Array)
-* [29. Divide Two Integers](#29.Divide-Two-Integers)
-* [66. Plus One](#66.Plus-One)
+* [1. Two Sum](#1-two-sum)  
+* [9. Palindrome Number](#9-palindrome-number)  
+* [15. 3Sum](#15-3sum)  
+* [17. Letter Combinations of a Phone Number](#17-letter-combinations-of-a-phone-number)
+* [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)  
+* [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)  
+* [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
+* [29. Divide Two Integers](#29-divide-two-integers)
+* [66. Plus One](#66-plus-one)
 
-## 1.Two Sum
+## 1. Two Sum
 
 注意返回的是位置：
 
@@ -43,7 +43,7 @@ for index, value in enumerate(nums):
         dic[value] = index
 ```
 
-## 9.Palindrome Number
+## 9. Palindrome Number
 
 一行代码就OK了，str(x)把x转字符串倒序后和str(x)比一下就OK。
 
@@ -51,7 +51,7 @@ for index, value in enumerate(nums):
 return str(x)[::-1] == str(x)
 ```
 
-## 15.3Sum
+## 15. 3Sum
 
 >
 
@@ -86,7 +86,7 @@ for i, v in enumerate(nums[:-2]):
                 arry.append(g)
 ```
 
-## 17.Letter Combinations of a Phone Number
+## 17. Letter Combinations of a Phone Number
 
 1. 首先可以考虑用一个字典将数字和单词对应起来
 2. 在循环里面便利digits。
@@ -102,11 +102,11 @@ for j in out:
         k.append(j+i)
 ```
 
-## 23.Merge k Sorted Lists
+## 23. Merge k Sorted Lists
 
 用一个最笨的方法就可以了，把所有元素添加到一个list中，list排序后，再用这个list生成一个链表。  
 
-## 24.Swap Nodes in Pairs
+## 24. Swap Nodes in Pairs
 
 使用递归解决这题。
 递归的主体就是我递归1、3、5...这些节点。
@@ -139,7 +139,7 @@ if head and head.next:
 
 其实就是返回空
 
-## 26.Remove Duplicates from Sorted Array
+## 26. Remove Duplicates from Sorted Array
 
 ```python
 from collections import OrderedDict
@@ -149,7 +149,7 @@ return len(OrderedDict.fromkeys(nums))
 
 OrderedDict.fromkeys(nums)使用nums中的值作为key。
 
-## 29.Divide Two Integers
+## 29. Divide Two Integers
 
 最简单的办法就是用减法替代除法，但是时间会超。
 所以用一个很有意思的方法去做。
@@ -175,7 +175,7 @@ while dividend >= divisor:
 
 当减到dividend - divisor减不起时，退出。
 
-## 66.Plus One
+## 66. Plus One
 
 两种方法  
 第一种:  
