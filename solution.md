@@ -4,13 +4,14 @@
 
 ## 目录
 
-* [1.Two Sum](#1.Two-Sum)  
-* [9.Palindrome Number](#9.Palindrome-Number)  
+* [1. Two Sum](#1.Two-Sum)  
+* [9. Palindrome Number](#9.Palindrome-Number)  
 * [15. 3Sum](#15.3Sum)  
 * [17. Letter Combinations of a Phone Number](#17.Letter-Combinations-of-a-Phone-Number)
 * [23. Merge k Sorted Lists](#23.Merge-k-Sorted-Lists)  
-* [24.Swap Nodes in Pairs](#24.Swap-Nodes-in-Pairs)  
+* [24. Swap Nodes in Pairs](#24.Swap-Nodes-in-Pairs)  
 * [26. Remove Duplicates from Sorted Array](#26.Remove-Duplicates-from-Sorted-Array)
+* [29. Divide Two Integers](#29.Divide-Two-Integers)
 * [66. Plus One](#66.Plus-One)
 
 ## 1.Two Sum
@@ -147,6 +148,32 @@ return len(OrderedDict.fromkeys(nums))
 ```
 
 OrderedDict.fromkeys(nums)使用nums中的值作为key。
+
+## 29.Divide Two Integers
+
+最简单的办法就是用减法替代除法，但是时间会超。
+所以用一个很有意思的方法去做。
+
+```python
+while dividend >= divisor:
+        temp, i = divisor, 1
+        while dividend >= temp:
+            dividend -= temp
+            res += i
+            i <<= 1
+            temp <<= 1
+```
+
+这里有两个while,temp用来替代divisor，也是由于temp, i我们可以快速的迭代。  
+先说内层的while，内层的while执行第一次循环后，res += i，i和temp都变为原来两倍，
+如果继续满足内层while循环，那么res就会加两倍i，temp和继续变大。
+如果不满足内层while，说明由于temp和i增长太大，dividend减不起temp了，但是也许可以能减的起divisor。
+所以我们再次循环这个temp和i变大的过程，当dicidend连divisor都减不起的时候，就退出了。
+
+> 1.我先减去divisior，再减2倍的divisor，再减4倍的。  
+> 2.当dividend减不起时，再次执行第1步
+
+当减到dividend - divisor减不起时，退出。
 
 ## 66.Plus One
 
