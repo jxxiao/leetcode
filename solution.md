@@ -11,8 +11,8 @@
 * [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)  
 * [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)  
 * [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
-* [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
 * [29. Divide Two Integers](#29-divide-two-integers)
+* [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
 * [66. Plus One](#66-plus-one)
 
 ## 1. Two Sum
