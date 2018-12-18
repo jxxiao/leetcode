@@ -11,6 +11,7 @@
 * [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)  
 * [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)  
 * [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
+* [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
 * [29. Divide Two Integers](#29-divide-two-integers)
 * [66. Plus One](#66-plus-one)
 
@@ -174,6 +175,20 @@ while dividend >= divisor:
 > 2.当dividend减不起时，再次执行第1步
 
 当减到dividend - divisor减不起时，退出。
+
+## 30. Substring with Concatenation of All Words
+
+题目就是从s中找出一个子串，子串中包含所有的words中的词。
+
+思路：
+> 因为要包含所有的词，所以我们是知道s的子串的长度的。所以我们可以不断取出字串。其实就是滑窗法。
+> 因为每个词语的长度相同，所以我们是可以把子串中的单词提取出来。
+> 我们只要判断子串中的单词是否和words中的一样即可。
+
+window_length表示字串长度。word_window表示子串。temp是把字串按词分开，存入temp中。
+判断temp是否和words相同即可。
+
+Counter()会返回一个字典，其key为list中的单词，value是单词出现的次数。
 
 ## 66. Plus One
 
