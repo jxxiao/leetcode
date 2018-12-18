@@ -13,6 +13,7 @@
 * [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
 * [29. Divide Two Integers](#29-divide-two-integers)
 * [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
+* [31. Next Permutation](#31-next-permutation)
 * [66. Plus One](#66-plus-one)
 
 ## 1. Two Sum
@@ -189,6 +190,10 @@ window_length表示字串长度。word_window表示子串。temp是把字串按�
 判断temp是否和words相同即可。
 
 Counter()会返回一个字典，其key为list中的单词，value是单词出现的次数。
+
+## 31. Next Permutation
+
+这题Solution中的动图后会很好写。了解全排列后，就可以看懂题目中的意思。
 
 ## 66. Plus One
 
