@@ -7,7 +7,7 @@ class Solution:
         """
         positive = (dividend < 0) is (divisor < 0)
         # 判断dividend和divisor符号是否相同，
-        
+
         dividend, divisor = abs(dividend), abs(divisor)
         res = 0
         while dividend >= divisor:
@@ -21,6 +21,7 @@ class Solution:
         if not positive:
             res = -res
         return min(max(-2147483648, res), 2147483647)
+
 
 dividend, divisor = 10, 3
 Solution().divide(dividend, divisor)

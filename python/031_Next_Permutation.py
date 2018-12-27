@@ -14,8 +14,8 @@ class Solution:
 
         for i in range(index, 0, -1):
 
-            if nums[i-1] >= nums[i]:continue
-            
+            if nums[i - 1] >= nums[i]: continue
+
             l, r = i - 1, index
             while nums[r] <= nums[l]:
                 r -= 1
@@ -23,8 +23,9 @@ class Solution:
             nums[l], nums[r] = nums[r], nums[l]
             reverse(nums, i)
             return
-        
+
         nums.reverse()
+
 
 nums = [1, 5, 8, 4, 7, 6, 5, 3, 1]
 
