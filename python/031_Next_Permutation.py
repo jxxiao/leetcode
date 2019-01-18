@@ -6,21 +6,21 @@ class Solution:
         """
         index = len(nums) - 1
 
-        def reverse(nums, l, r=index):
-            while l < r:
-                nums[l], nums[r] = nums[r], nums[l]
-                l += 1
-                r -= 1
+        def reverse(nums, left, right=index):
+            while left < right:
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1
 
         for i in range(index, 0, -1):
 
             if nums[i - 1] >= nums[i]: continue
 
-            l, r = i - 1, index
-            while nums[r] <= nums[l]:
+            left, r = i - 1, index
+            while nums[r] <= nums[left]:
                 r -= 1
 
-            nums[l], nums[r] = nums[r], nums[l]
+            nums[left], nums[right] = nums[right], nums[left]
             reverse(nums, i)
             return
 

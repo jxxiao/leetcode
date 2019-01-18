@@ -7,6 +7,6 @@ class Solution:
         return max(dp)
 
 
-s = ")()())"
+s = "()()(())("
 result = Solution().longestValidParentheses(s)
 print(result)
