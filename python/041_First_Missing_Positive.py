@@ -10,3 +10,7 @@ class Solution:
             if num == res:
                 res += 1
         return res
+
+
+nums = [3, 4, -1, 1]
+Solution().firstMissingPositive(nums)
