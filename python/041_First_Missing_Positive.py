@@ -12,5 +12,6 @@ class Solution:
         return res
 
 
+
 nums = [3, 4, -1, 1]
 Solution().firstMissingPositive(nums)
