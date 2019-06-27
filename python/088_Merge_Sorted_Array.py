@@ -15,4 +15,4 @@ class Solution:
                 l1 -= 1
             last -= 1
         if l1 < 0:
-            nums1[:l2+1] = nums2[:l2+1]
+            nums1[:l2 + 1] = nums2[:l2 + 1]
