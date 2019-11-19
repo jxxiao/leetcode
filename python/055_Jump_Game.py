@@ -12,3 +12,12 @@ class Solution(object):
                 step += 1
 
         return True if step == 1 else False
+
+    def canJump2(self, nums):
+        # m表示当前能去的最远的位置
+        m = 0
+        for i, n in enumerate(nums):
+            if i > m:
+                return False
+            m = max(m, i + n)
+        return True

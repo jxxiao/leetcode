@@ -21,3 +21,7 @@ class Solution:
 
         maxLen, centerIndex = max((length, i) for i, length in enumerate(P))
         return s[(centerIndex - maxLen)//2:(centerIndex + maxLen)//2]
+
+
+a = 'cbbd'
+Solution().longestPalindrome(a)

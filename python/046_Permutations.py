@@ -12,4 +12,4 @@ class Solution:
 
 
 nums = [1, 2, 3]
-Solution().permute(nums)
+print(Solution().permute(nums))

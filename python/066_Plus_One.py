@@ -1,6 +1,3 @@
-digits = [1, 9, 9]
-
-
 class Solution:
     def plusOne(self, digits):
         for i in range(len(digits)):
@@ -17,4 +14,5 @@ class Solution:
         return result
 
 
+digits = [1, 8, 9]
 print(Solution().plusOne(digits))

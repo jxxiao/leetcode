@@ -14,6 +14,7 @@
 * [29. Divide Two Integers](#29-divide-two-integers)
 * [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
 * [31. Next Permutation](#31-next-permutation)
+* [54. Spiral Matrix](#54-spiral-matrix)
 * [66. Plus One](#66-plus-one)
 
 ## 1. Two Sum
@@ -193,7 +194,45 @@ Counter()会返回一个字典，其key为list中的单词，value是单词出�
 
 ## 31. Next Permutation
 
-这题Solution中的动图后会很好写。了解全排列后，就可以看懂题目中的意思。
+全排列，就是说下一个是能找到的最小的大于上一个数。
+这一题分为两步：
+
+1. 从右往左找到第一个不递增的元素i。（1，4，2）就是找到4
+2. 从右往左找到第一个大于i-1的元素j，并将其交换位置。
+3. 将i和后面的元素[i,end]不断交换首尾。
+
+## 54. Spiral Matrix
+
+矩阵转换，可以通过行列变换和行倒(matrix[::-1])实现。
+顺时针转换:先行倒过来，再zip
+
+```python
+matrix = matrix[::-1]
+matrix = list(list(i) for i in zip(*matrix))
+
+## 合起来就是
+matrix = list(list(i) for in zip(*matrix[::-1]))
+```
+
+逆时针转换:先zip,再行倒过来
+
+```python
+matrix = list(list(i) for i in zip(*matrix))
+matrix = matrix = matrix[::-1]
+
+## 合起来就是
+matrix = list(list(i) for i in zip(*matrix))[::-1]
+```
+
+这一题的写法就是 先pop第一行，再逆时针旋转矩阵，再pop第一行，不断重复直到矩阵中没有数。
+
+```python
+while matrix:
+    res = res + matrix.pop(0)
+    matrix = list(list(i) for i in zip(*matrix))[::-1]
+```
+
+这一题的思路对59题也有帮助，这里是pop，59题是生成。
 
 ## 66. Plus One
 

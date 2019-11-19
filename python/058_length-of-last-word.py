@@ -30,5 +30,6 @@
 
 class Solution:
     def lengthOfLastWord(self, s: 'str') -> 'int':
+        # rstrip()删除末尾字符(默认空格)
         return len(s.rstrip().split(' ')[-1])
 
