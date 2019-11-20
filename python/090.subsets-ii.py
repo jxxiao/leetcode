@@ -1,10 +1,10 @@
 '''
-@Author: your name
+@Description:
+@Author: jxxiao
+@Github: https://github.com/jxxiao
 @Date: 2019-11-15 22:01:28
-@LastEditTime: 2019-11-16 01:03:47
-@LastEditors: Please set LastEditors
-@Description: In User Settings Edit
-@FilePath: /leetcode/python/90.subsets-ii.py
+@LastEditors: jxxiao
+@LastEditTime: 2019-11-20 16:19:37
 '''
 #
 # @lc app=leetcode id=90 lang=python3
@@ -51,6 +51,7 @@ class Solution:
         res = []
         nums.sort()
         self.dfs(nums, 0, [], res)
+        return res
 
     def dfs(self, nums, index, path, res):
         res.append(path)
@@ -69,6 +70,5 @@ class Solution:
 
 
 nums = [1, 2, 2, 3, 3, 3]
-Solution().subsetsWithDup_noRec(nums)
-
+Solution().subsetsWithDup(nums)
 # @lc code=end
