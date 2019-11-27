@@ -1,10 +1,10 @@
 '''
-@Description: 
+@Description:
 @Author: jxxiao
 @Github: https://github.com/jxxiao
 @Date: 2019-11-27 11:11:23
 @LastEditors: jxxiao
-@LastEditTime: 2019-11-27 11:22:55
+@LastEditTime: 2019-11-27 16:51:39
 '''
 #
 # @lc app=leetcode id=92 lang=python3
@@ -22,16 +22,16 @@
 # Testcase Example:  '[1,2,3,4,5]\n2\n4'
 #
 # Reverse a linked list from position m to n. Do it in one-pass.
-# 
+#
 # Note: 1 ≤ m ≤ n ≤ length of list.
-# 
+#
 # Example:
-# 
-# 
+#
+#
 # Input: 1->2->3->4->5->NULL, m = 2, n = 4
 # Output: 1->4->3->2->5->NULL
-# 
-# 
+#
+#
 #
 
 # @lc code=start
@@ -41,11 +41,12 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         dummy = pre = ListNode(0)
         dummy.next = head
-        for _ in range(m-1):
+        for _ in range(m - 1):
             pre = pre.next
         cur = pre.next
         # reverse the defined party
@@ -59,4 +60,6 @@ class Solution:
         pre.next.next = cur
         pre.next = node
         return dummy.next
+
+
 # @lc code=end
