@@ -1,15 +1,15 @@
-# leetcode习题解答  
+# leetcode习题解答
 
-这里会有我刷leetcode的习题解答，很多都是看讨论区学到的，然后自己重写了一遍。  
+这里会有我刷leetcode的习题解答，很多都是看讨论区学到的，然后自己重写了一遍。
 
 ## 目录
 
-* [1. Two Sum](#1-two-sum)  
-* [9. Palindrome Number](#9-palindrome-number)  
-* [15. 3Sum](#15-3sum)  
+* [1. Two Sum](#1-two-sum)
+* [9. Palindrome Number](#9-palindrome-number)
+* [15. 3Sum](#15-3sum)
 * [17. Letter Combinations of a Phone Number](#17-letter-combinations-of-a-phone-number)
-* [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)  
-* [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)  
+* [23. Merge k Sorted Lists](#23-merge-k-sorted-lists)
+* [24. Swap Nodes in Pairs](#24-swap-nodes-in-pairs)
 * [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
 * [29. Divide Two Integers](#29-divide-two-integers)
 * [30. Substring with Concatenation of All Words](#30-substring-with-concatenation-of-all-words)
@@ -107,7 +107,7 @@ for j in out:
 
 ## 23. Merge k Sorted Lists
 
-用一个最笨的方法就可以了，把所有元素添加到一个list中，list排序后，再用这个list生成一个链表。  
+用一个最笨的方法就可以了，把所有元素添加到一个list中，list排序后，再用这个list生成一个链表。
 
 ## 24. Swap Nodes in Pairs
 
@@ -167,13 +167,13 @@ while dividend >= divisor:
             temp <<= 1
 ```
 
-这里有两个while,temp用来替代divisor，也是由于temp, i我们可以快速的迭代。  
+这里有两个while,temp用来替代divisor，也是由于temp, i我们可以快速的迭代。
 先说内层的while，内层的while执行第一次循环后，res += i，i和temp都变为原来两倍，
 如果继续满足内层while循环，那么res就会加两倍i，temp和继续变大。
 如果不满足内层while，说明由于temp和i增长太大，dividend减不起temp了，但是也许可以能减的起divisor。
 所以我们再次循环这个temp和i变大的过程，当dicidend连divisor都减不起的时候，就退出了。
 
-> 1.我先减去divisior，再减2倍的divisor，再减4倍的。  
+> 1.我先减去divisior，再减2倍的divisor，再减4倍的。
 > 2.当dividend减不起时，再次执行第1步
 
 当减到dividend - divisor减不起时，退出。
@@ -236,9 +236,9 @@ while matrix:
 
 ## 66. Plus One
 
-两种方法  
-第一种:  
-最传统的，倒序遍历nums，  
+两种方法
+第一种:
+最传统的，倒序遍历nums，
 如果nums[i] 小于9，直接nums[i] + 1 再return就OK，
 等于9时，nums[i] = 0,再看nums[i-1]是否小于9，逻辑同上。
 如果遍历完数组后，还没有return，说明这个数组里面全是9，直接return [1]+[0]*len(nums)
@@ -253,10 +253,10 @@ return [1] + [0] * len(digits)
 ```
 
 ~i 是按位取反操作，通过取反我们就能得到倒数第i+1个数。
-例如i = 0时，\~i是-1 所以使用\~i就可以实现倒序查看nums了。  
+例如i = 0时，\~i是-1 所以使用\~i就可以实现倒序查看nums了。
 
-第二种：  
-把list转换成str，再变成int，+1之后，再转成str，然后一个转int存入到list中。  
+第二种：
+把list转换成str，再变成int，+1之后，再转成str，然后一个转int存入到list中。
 
 ```python
 result = []
