@@ -4,7 +4,7 @@
 @Github: https://github.com/jxxiao
 @Date: 2020-02-21 02:28:35
 @LastEditors: jxxiao
-@LastEditTime: 2020-02-23 02:26:23
+@LastEditTime: 2020-03-26 18:18:10
 '''
 #
 # @lc app=leetcode id=123 lang=python3
@@ -94,4 +94,6 @@ class Solution:
         return max(0, s1, s2)
 
 
+nums = [3, 3, 5, 0, 0, 3, 1, 4]
+Solution().maxProfit(nums)
 # @lc code=end

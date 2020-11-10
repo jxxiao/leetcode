@@ -1,11 +1,17 @@
+'''
+@Description:
+@Author: jxxiao
+@Github: https://github.com/jxxiao
+@Date: 2019-05-15 21:17:50
+@LastEditors: jxxiao
+@LastEditTime: 2020-04-19 22:55:33
+'''
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         len_word1, len_word2 = len(word1), len(word2)
         list_word1, list_word2 = list(word1), list(word2)
-        print(len_word1)
         cost = [[0 for i in range(len_word2+1)] for i in range(len_word1+1)]
         for i in range(len_word2+1):
-            print(i)
             cost[0][i] = i
         for i in range(len_word1+1):
             cost[i][0] = i
